@@ -1,0 +1,58 @@
+/* Running the following example:
+ * just call goil a first time using the script:
+ ./rungoil.sh blink.oil
+ 
+ * Then a Makefile is generated. Just type:
+ * make -s
+ * To clean the project, call:
+ * make clean
+ * It will remove all generated files, except the Makefile.
+ * to flash to the Arduino:
+ * make -s flash
+ * It will use the PORT defined in the ARDUINO part.
+ */
+OIL_VERSION = "2.5" : "test" ;
+
+CPU test {    
+  OS config {
+    STATUS = STANDARD;
+    ARDUINO = TRUE {
+      BOARD = UNO;
+      SERIAL = TRUE;
+      PORT = "/dev/ttyACM0";
+      AVR_LIBC = "/usr/share/arduino/hardware/arduino/cores/arduino/avr-libc";
+    };
+    BUILD = TRUE {
+      APP_NAME = "trampuinoBlink";
+      TRAMPOLINE_BASE_PATH = "$(TRAMPOLINE_PATH)";
+      APP_SRC = "blink.c";
+      COMPILER = "avr-gcc";
+      LINKER = "avr-gcc";
+      ASSEMBLER = "avr-gcc";
+    };
+    SYSTEM_CALL = TRUE;
+  };
+
+  APPMODE std {};
+  
+  ALARM periodicAl {
+    COUNTER= SystemCounter;
+    ACTION = ACTIVATETASK {
+      TASK = periodicTask;
+    };
+    AUTOSTART = TRUE {
+      ALARMTIME = 1000; //activated each 1024 ms
+      CYCLETIME = 1000; //activated each 1024 ms
+      APPMODE = std;
+    };
+  };
+
+  TASK periodicTask {
+    PRIORITY = 20;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 256;
+  };
+
+};

@@ -1,0 +1,16 @@
+LG, May 2016
+
+Use rungoil script to run the goil build system.
+goil should be in the PATH.
+
+To run examples :
+*first set the variables : VIPER_PATH and TRAMPOLINE_PATH .
+
+*for arduino target :
+(led on digital 0)
+cd arduino ; ./rungoil.sh blink.oil ; make ; make -s flash
+
+*for posix target :
+(nothing to do)
+cd linux ; ./rungoil periodic.oil ; make ; ./tramposixPeriodic
+(stop with CtrlC)
