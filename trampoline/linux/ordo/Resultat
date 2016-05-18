@@ -1,0 +1,47 @@
+1)
+Tache 1 PreTaskHook 
+Tache 1 Bonjour ! 
+Avant Activate 
+Après Activate 
+Tache 1 PostTaskHook 
+Tache 0 PreTaskHook 
+Tache 0 Bonjour ! 
+Tache 0 PostTaskHook 
+Tache -1 PreTaskHook 
+
+2)
+Tache 1 PreTaskHook 
+Tache 1 Bonjour ! 
+Avant Activate 
+Tache 1 PostTaskHook 
+Tache 0 PreTaskHook 
+Tache 0 Bonjour ! 
+Tache 0 PostTaskHook 
+Tache -1 PreTaskHook 
+
+
+3)
+Tache 0 PreTaskHook 
+Tache 0 Bonjour ! 
+Avant Activate 
+Tache 0 PostTaskHook 
+Tache 1 PreTaskHook 
+Tache 1 Bonjour ! 
+Tache 1 PostTaskHook 
+Tache 0 PreTaskHook 
+Après Activate 
+Tache 0 PostTaskHook 
+Tache -1 PreTaskHook 
+
+
+4)
+Tache 1 PreTaskHook 
+Tache 1 Bonjour ! 
+Avant Activate 
+Après Activate 
+Tache 1 PostTaskHook 
+Tache 0 PreTaskHook 
+Tache 0 Bonjour ! 
+Tache 0 PostTaskHook 
+Tache -1 PreTaskHook 
+
