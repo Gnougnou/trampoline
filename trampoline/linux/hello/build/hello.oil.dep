@@ -1,7 +1,0 @@
-hello.oil: \
- /home/gnougnou/Bureau/MIF25/TP3/trampoline-master/goil/templates/config/config.oil \
- /home/gnougnou/Bureau/MIF25/TP3/trampoline-master/goil/templates/config/kernel.oil \
- /home/gnougnou/Bureau/MIF25/TP3/trampoline-master/goil/templates/config/api.oil \
- /home/gnougnou/Bureau/MIF25/TP3/trampoline-master/goil/templates/config/api_STM.oil \
- /home/gnougnou/Bureau/MIF25/TP3/trampoline-master/goil/templates/config/posix/config.oil \
- /home/gnougnou/Bureau/MIF25/TP3/trampoline-master/goil/templates/config/config2.5.oil
